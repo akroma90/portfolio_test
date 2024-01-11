@@ -2,7 +2,7 @@ import dash
 from dash import html, Input, Output, State
 import dash_bootstrap_components as dbc
 app = dash.Dash()
-#server = app.server
+server = app.server
 app.layout = html.Div([
 
     #Div1 Header Info
@@ -275,5 +275,5 @@ def toggle_modal(n1, n2, is_open):
 
 
 
-if __name__ == '__main__':
-    app.run_server(debug=True,host='127.0.0.1',port=8050)
+#if __name__ == '__main__':
+#    app.run_server(debug=True,host='127.0.0.1',port=8050)
