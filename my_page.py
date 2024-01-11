@@ -2,7 +2,7 @@ import dash
 from dash import html, Input, Output, State
 import dash_bootstrap_components as dbc
 app = dash.Dash()
-server = app.server
+#server = app.server
 app.layout = html.Div([
 
     #Div1 Header Info
