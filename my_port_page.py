@@ -2,7 +2,7 @@ import dash
 from dash import html, Input, Output, State
 import dash_bootstrap_components as dbc
 app = dash.Dash()
-server = app.server
+server=app.server
 app.layout = html.Div([
 
     #Div1 Header Info
@@ -18,15 +18,15 @@ app.layout = html.Div([
 
     # CARD APP 1
         dbc.Card([
-            dbc.CardImg(src=dash.get_asset_url("fig1.png"), top=True),
+            dbc.CardImg(src=dash.get_asset_url("fig1.png"), top=True, className="thumbnail"),
             
             dbc.CardBody([
                 
-                html.H4("Earthquake Stats Viewer", className="card-title"),
+                html.H4(["Earthquake Stats Viewer"], className="card-title",style={'padding-left': '15px'}),
                 html.P(["Displays Spatial, Magnitude and Depth",html.Br(),
                         "Distribution of Earthquakes",html.Br(),
                         "(Python, Tkinter, Matplotlib)"
-                        ],className="card1-text"),
+                        ],className="card1-text",style={'padding-left': '15px'}),
                 
                 dbc.Button("Play Preview", id="button_1"),
 
@@ -52,7 +52,7 @@ app.layout = html.Div([
                           centered=True,
                           is_open=False,
                           size="xl",
-                          style={"width": "760px", "height": "760px","background":"white","margin-left":"500px"},
+                          style={"width": "760px", "height": "760px","background":"white","margin-left":"420px"},
                           ),
 
                 ])
@@ -68,18 +68,18 @@ app.layout = html.Div([
     # CARD APP 2
         dbc.Card([
 
-            dbc.CardImg(src=dash.get_asset_url("fig2.png"), top=True),
+            dbc.CardImg(src=dash.get_asset_url("fig2.png"), top=True, className="thumbnail"),
 
             dbc.CardBody([
 
-                html.H4("PT Log Viewer", className="card-title"),
+                html.H4(["PT Log Viewer"], className="card-title",style={'padding-left': '15px'}),
                 
-                html.P(["Displays Pressure and Temperature Graphs",html.Br(),
-                        "and Lithology",html.Br(),
+                html.P(["Displays Pressure and Temperature ",html.Br(),
+                        "Graphs and Lithology",html.Br(),
                         "(Python, Dash, Plotly)"
                        
                   
-                        ],className="card2_text"),
+                        ],className="card2_text",style={'padding-left': '15px'}),
 
                 dbc.Button("Play Preview", id="button_2"),
 
@@ -105,7 +105,7 @@ app.layout = html.Div([
                           centered=True,
                           is_open=False,
                           size="xl",
-                          style={"width": "760px", "height": "760px","background":"white","margin-left":"500px"},
+                          style={"width": "760px", "height": "760px","background":"white","margin-left":"420px"},
                           ),
 
                 ])
@@ -115,18 +115,18 @@ app.layout = html.Div([
   # CARD APP 3
         dbc.Card([
 
-            dbc.CardImg(src=dash.get_asset_url("fig3.png"), top=True),
+            dbc.CardImg(src=dash.get_asset_url("fig3.png"), top=True,className="thumbnail"),
 
             dbc.CardBody([
 
-                html.H4("Earthquake Animations", className="card-title"),
+                html.H4(["Earthquake Animations"], className="card-title",style={'padding-left': '15px'}),
                 
                 html.P(["Displays Earthquake Animations",html.Br(),
                         "Colored by Magnitude or Depth",html.Br(),
                         "(Python, Dash, Plotly)"
                        
                   
-                        ],className="card3_text"),
+                        ],className="card3_text", style={'padding-left': '15px'}),
 
                 dbc.Button("Play Preview", id="button_3"),
                                 dbc.Modal([
@@ -151,7 +151,7 @@ app.layout = html.Div([
                           centered=True,
                           is_open=False,
                           size="xl",
-                          style={"width": "760px", "height": "760px","background":"white","margin-left":"500px"},
+                          style={"width": "760px", "height": "760px","background":"white","margin-left":"420px"},
                           ),
 
                 ])
@@ -163,18 +163,18 @@ app.layout = html.Div([
   # CARD APP 4
         dbc.Card([
 
-            dbc.CardImg(src=dash.get_asset_url("fig4.png"), top=True),
+            dbc.CardImg(src=dash.get_asset_url("fig4.png"), top=True,className="thumbnail"),
 
             dbc.CardBody([
 
-                html.H4("Earthquake Animations (3D)", className="card-title"),
+                html.H4(["Earthquake Animations (3D)"], className="card-title",style={'padding-left': '15px'}),
                 
                 html.P(["Displays Earthquake Animations",html.Br(),
                         "Colored by Magnitude or Depth",html.Br(),
                         "(Python, Matplotlib)"
                        
                   
-                        ],className="card4_text"),
+                        ],className="card4_text", style={'padding-left': '15px'}),
 
                 dbc.Button("Play Preview", id="button_4"),
 
@@ -200,7 +200,7 @@ app.layout = html.Div([
                           centered=True,
                           is_open=False,
                           size="xl",
-                          style={"width": "760px", "height": "760px","background":"white","margin-left":"500px"},
+                          style={"width": "760px", "height": "760px","background":"white","margin-left":"420px"},
                           ),
 
                 ])
